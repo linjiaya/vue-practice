@@ -1,6 +1,6 @@
 # vue-practice
 
-> 我的第一个vue project
+> 我的vue学习 小练习
 
 ## Build Setup
 
