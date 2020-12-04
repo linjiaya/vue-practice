@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <headerComp></headerComp>
     <router-view name="header"></router-view>
     <!-- <img src="./assets/logo.png"> -->
     <!-- 这个是主图 -->
 <!-- todolist 开始 -->
-    <input type="text" 
+    <input type="text"
     v-model="newItem"
     v-on:keyup.enter="addNew"
     >
     <ul>
-      <li 
-        v-for="item in items" 
+      <li
+        v-for="item in items"
         :class="{finished:item.isFinished}"
         v-on:click="toggleFinish(item);"
+        :key="item"
         >
         {{item.label}}
       </li>
@@ -32,6 +32,9 @@
     <router-link class="btn btn-primary" to="/form">form</router-link>
     <router-link class="btn btn-primary" to="/Component">component</router-link>
     <router-link class="btn btn-primary" to="/Component2">component2</router-link>
+    <router-link class="btn btn-primary" to="/googleMap">googleMap</router-link>
+    <router-link class="btn btn-primary" to="/yzmInput">yzmInput</router-link>
+    <router-link class="btn btn-primary" to="/mockEG">mockEG</router-link>
     <button class="btn btn-success" @click="goClick()">$router.go(-1)</button>
     <div class="row">
       <transition name="slide-left"><router-view></router-view></transition>
@@ -39,20 +42,19 @@
     <hr>
     <router-view name="footer"></router-view>
     <!-- 这个是放router文件引入的界面展示 -->
-    <footerComp></footerComp>
   </div>
 </template>
 
 <script>
-import Store from './store'
+import tools from './tools'
 
-// console.log(Store);
+// console.log(tools);
 export default {
   name: 'app',
   data:function (){
     return {
       title: '<span>?</span>这是title',
-      items:Store.fetch(),
+      items:tools.fetch(),
       newItem:''
     }
   },
@@ -86,7 +88,7 @@ export default {
   watch:{
     items:{//监控items
       handler : function (items){
-        Store.save(items);
+        tools.save(items);
         // console.log(value,oldValue)
         //注意：当观察的数据为对象或数组时，curVal和oldVal是相等的，因为这两个形参指向的是同一个数据对象
       },

@@ -58,7 +58,7 @@
               <li><strong>第二种</strong></li>
               <todo-item2 :todo="todo"></todo-item2>
               <li><strong>第三种</strong></li>
-              <todo-item3 v-for="item in todo" v-bind:todo='item'></todo-item3>   
+              <todo-item3 v-for="item in todo" :key="item" v-bind:todo='item'></todo-item3>
             </ul>
           </li>
         </ol>
@@ -73,7 +73,7 @@
           &lt;!-- 在 HTML 中使用 kebab-case --&gt;
           &lt;child my-message="hello!"&gt;&lt;/child&gt;
         </code></pre>
-        
+
       </div>
     </div>
   </div>
@@ -298,7 +298,7 @@ let data = {count : 0};
       'currency-input':{
         template:`<div>
           <label v-if="label">{{label}}</label>
-          $ <input type="text" 
+          $ <input type="text"
             :value="value"
             @input="updateValue($event.target.value)">
         </div>`,
@@ -338,7 +338,7 @@ let data = {count : 0};
         return ((
           this.price * 100 +
           this.shipping * 100 +
-          this.handling * 100 - 
+          this.handling * 100 -
           this.discount * 100
           )/100).toFixed(2)
       }

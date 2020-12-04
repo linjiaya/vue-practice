@@ -2,6 +2,7 @@
   <div class="parent">
     <p>child tells me: {{childWords}}</p>
     <child msgfromfather="some interesting" v-on:child-tell-me-something="listenToMy"></child>
+    <!-- v-bind:child-tell-me-something="listenToMy" -->
   </div>
 </template>
 

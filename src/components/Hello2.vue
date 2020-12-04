@@ -6,7 +6,7 @@
   <button class="btn btn-default" @click="changeOk()">ok toggle</button>
   <br>
   <br>
-  <p>这样不用写watch :{{this.$route.params}}</p>
+  <p>这样不用写watch :{{this.$route.name}}</p>
 </div>
 </template>
 

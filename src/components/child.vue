@@ -1,7 +1,7 @@
 <template>
   <div class="child">
-    <h1>{{msg}}</h1>
-    <h1>{{msgfromfather}}</h1>
+    <!-- <h1>{{msg}}</h1> -->
+    <!-- <h1>{{msgfromfather}}</h1> -->
     <button class="btn btn-primary" v-on:click="onClickMe">click</button>
   </div>
 </template>

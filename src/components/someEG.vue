@@ -67,6 +67,11 @@
           <li>v-for="n in even(number)"</li>
           <li v-for="n in even(number)">{{n}}</li>
         </ul>
+        <ul class="col-sm-6">
+          <li v-for="n in planeInfos">
+            {{n}}
+          </li>
+        </ul>
       </div>
       <div class="col-sm-6">
         <h2>数组更新检测</h2>
@@ -124,6 +129,14 @@
         &lt;component v-for="item in items" :key="item.id"&gt;&lt;/component&gt;
         </code></pre></p>
       </div>
+      <p>{{arr2}}</p>
+      <table>
+        <tr v-for="(tr, index) in arr2">
+          <td v-for="(td, i) in tr">
+            <input type="text" v-model="arr2[index][i]">
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
   
@@ -147,7 +160,22 @@ export default {
         {name:'banana',price:'$30'}
       ],
       textAlign:'left',
-      number:[1,2,3,4,5,6,7,8,9]
+      number:[1,2,3,4,5,6,7,8,9],
+      planeInfos:{
+        '25':{
+          id: 25,
+          height: 25
+        },
+        '26':{
+          id: 26,
+          height: 26
+        },
+        '27':{
+          id: 27,
+          height: 27
+        }
+      },
+      arr2: [[1,2,3],[2,3,4],[5,6,7]],
     }
   },
   computed:{

@@ -18,18 +18,24 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li> -->
     </ul>
+    vue-test
+    <!-- <vue-test></vue-test> -->
   </div>
 </template>
 
 <script>
+import vueTest from '../example/vuexTest'
 export default {
   name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    vueTest: vueTest,
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

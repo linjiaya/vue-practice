@@ -12,72 +12,78 @@ import Event from '@/components/event'
 import Form from '@/components/form'
 import Component from '@/components/component'
 import Component2 from '@/components/component2'
+import googleMap from '@/components/googleMap'
+import yzmInput from '@/components/yzmInput'
+import mockEG from '@/example/mockEG'
 
 //LinVueRouter 这里三个名字要一样
 
 Vue.use(LinVueRouter)
 
 const routers = [
-{
-  path:'/',
-  components:{
-    default:Hello,
-    header:Header,
-    footer:Footer
-  }
-},
-{
-  path: '/Hello',
-  name: 'Hello',
-  component: Hello,
-  children:[
-    {
-      name:'Hello2',
-      path: 'Hello2/:id',
-      component: Hello2
+  {
+    path:'/',
+    components:{
+      default:Hello,
+      header:Header,
+      footer:Footer
     }
-  ]
-},
-{
-  path: '/textHtml',
-  name: 'textHtml',
-  component: textHtml
-},
-{
-  path: '/someEG',
-  name: 'someEG',
-  component: someEG
-},
-{
-  path: '/parent',
-  name: 'parent',
-  component: parent
-},
-{
-  path: '/todoList',
-  name: 'todoList',
-  component: todoList
-},
-{
-  path: '/event',
-  name: 'Event',
-  component: Event
-},
-{
-  path: '/form',
-  name: 'Form',
-  component: Form
-},
-{
-  path: '/Component',
-  name: 'Component',
-  component: Component
-},
-{
-  path: '/Component2',
-  name: 'Component2',
-  component: Component2
-}
+  },{
+    path: '/Hello',
+    name: 'Hello',
+    component: Hello,
+    children:[
+      {
+        name:'Hello2',
+        path: 'Hello2/:id',
+        component: Hello2
+      }
+    ]
+  },{
+    path: '/textHtml',
+    name: 'textHtml',
+    component: textHtml
+  },{
+    path: '/someEG',
+    name: 'someEG',
+    component: someEG
+  },{
+    path: '/parent',
+    name: 'parent',
+    component: parent
+  },{
+    path: '/todoList',
+    name: 'todoList',
+    component: todoList
+  },{
+    path: '/event',
+    name: 'Event',
+    component: Event
+  },{
+    path: '/form',
+    name: 'Form',
+    component: Form
+  },{
+    path: '/Component',
+    name: 'Component',
+    component: Component
+  },{
+    path: '/Component2',
+    name: 'Component2',
+    component: Component2
+  },{
+    path: '/googleMap',
+    name: 'googleMap',
+    component: googleMap
+  },{
+    path: '/yzmInput',
+    name: 'yzmInput',
+    component: yzmInput
+  },{
+    path: '/mockEG',
+    name: 'mockEG',
+    component: mockEG
+  }
 ];
 
 export default new LinVueRouter({
