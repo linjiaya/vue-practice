@@ -21,6 +21,7 @@ Vue.config.productionTip = false
 console.log(2);
 console.log(1);
 console.log(2);
+console.log(4);
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyDEK4XKx_F2_R76kuxE_igcWbZpu1n14BQ',
