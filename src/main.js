@@ -3,7 +3,11 @@
  * @Author: linjia
  * @Date: 2021-08-16 15:14:38
  * @LastEditors: linjia
- * @LastEditTime: 2021-08-16 15:27:50
+<<<<<<< HEAD
+ * @LastEditTime: 2021-08-16 15:53:00
+=======
+ * @LastEditTime: 2021-08-16 15:16:20
+>>>>>>> debug2
  */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
