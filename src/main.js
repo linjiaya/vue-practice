@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: linjia
+ * @Date: 2021-08-16 15:14:38
+ * @LastEditors: linjia
+ * @LastEditTime: 2021-08-16 15:15:03
+ */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
@@ -17,10 +24,9 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 
 // import $ from 'jquery'
 // 设置为 false 以阻止 vue 在启动时生成生产提示。
-Vue.config.productionTip = false
-console.log(2);
-console.log(1);
-console.log(2);
+Vue.config.productionTip = false;
+
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyDEK4XKx_F2_R76kuxE_igcWbZpu1n14BQ',
